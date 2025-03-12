@@ -71,5 +71,38 @@ Tabele w bazie mogą być ze sobą w jakiś sposób powiązane. Istnieją trzy g
 
 Tabela "Oceny" wskazuje, że do indeksu s2137 przypisana jest ocena 3.5 z RBD. Z tabeli "Osoby" możemy wywnioskować, że do indeksu s2137 przypisany jest Jan Nowak.
 
+Z tabeli **Oceny** wywnioskować możemy, że do indeksu `s2137` przypisana jest ocena `3.5` z **RBD**. Z tabeli **Osoby** wywnioskować możemy, że do indeksu `s2137` przypisany jest **Jan Nowak**. W taki sposób łączyć będziemy ze sobą dane znajdujące się w oddzielnych tabelach, ale ze sobą powiązane. Istnieją 3 rodzaje relacji:
 
+### Jeden do jednego - 1:1
+Najprostszy do zrozumienia rodzaj relacji. Łączy dokładnie **jeden** rekord z **Tabeli 1** z dokładnie **jednym** rekordem z **Tabeli 2**. Stosowany często do rozszerzania pewnych informacji. 
+
+Dla przykładu, w danym momencie jedna osoba może posiadać **tylko jeden paszport** w danym kraju. W momencie wydania nowego, stary jest unieważniany. Dlatego w krajowej bazie danych paszport możemy połączyć z daną osobą połączeniem **1:1**. 
+
+Zapis na diagramie ERD:
+```
+PERSONS
+  |
+  | have
+  |
+PASSPORTS
+```
+
+### Jeden do wielu - 1:n
+Odrobinę bardziej złożony i bardzo często stosowany. W tym rodzaju relacji **jeden rekord** z **Tabeli 1** przypisany może być do **wielu rekordów** z **Tabeli 2**. 
+
+Przykładem takiej relacji może być związek pomiędzy przedstawionymi wyżej tabelami **Osoby** i **Oceny**, ale również przedstawiony poniżej przykład, w którym **wiele biletów lotniczych** może być przypisanych do **jednego paszportu**, ale na **jednym bilecie** może być **tylko jeden paszport**.
+
+Zapis na diagramie ERD:
+```
+PASSPORTS
+  |
+  | have assigned
+  |
+TICKETS
+```
+
+### Wiele do wielu - m:n
+Ten rodzaj relacji określa, że **wiele rekordów** z **Tabeli 1** może być przypisanych do **wielu rekordów** **Tabeli 2**. W implementacji bazy danych taka relacja wymaga stworzenia dodatkowej tabeli, tzw. **łączącej** lub **asocjacyjnej**. Spotkać się można również z określeniem **tabela agregująca**, ale jest ono błędne.
+
+Przykładem takiej relacji może być sytuacja z **rezerwacjami lotniczymi**, w której na **jednej rezerwacji** znajduje się **wiele osób**, a **każda osoba** może być przypisana do **wielu rezerwacji**.
 
