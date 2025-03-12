@@ -77,6 +77,18 @@ Z tabeli **Oceny** wywnioskować możemy, że do indeksu `s2137` przypisana jest
 ### Jeden do jednego - 1:1
 Najprostszy do zrozumienia rodzaj relacji. Łączy dokładnie **jeden** rekord z **Tabeli 1** z dokładnie **jednym** rekordem z **Tabeli 2**. Stosowany często do rozszerzania pewnych informacji. 
 
+Dla przykładu, w danym momencie jedna osoba może posiadać **tylko jeden paszport** w danym kraju. W momencie wydania nowego, stary jest unieważniany. Dlatego w krajowej bazie danych paszport możemy połączyć z daną osobą połączeniem **1:1**. 
+
+Zapis na diagramie ERD:
+```
+PERSONS
+  |
+  | have
+  |
+PASSPORTS
+```
+
+#### Przykład Diagram Company
 
 
 ### Jeden do wielu - 1:n
