@@ -72,7 +72,7 @@ Tabela "Oceny" wskazuje, że do indeksu s2137 przypisana jest ocena 3.5 z RBD. Z
 
 Z tabeli **Oceny** wywnioskować możemy, że do indeksu `s2137` przypisana jest ocena `3.5` z **RBD**. Z tabeli **Osoby** wywnioskować możemy, że do indeksu `s2137` przypisany jest **Jan Nowak**. W taki sposób łączyć będziemy ze sobą dane znajdujące się w oddzielnych tabelach, ale ze sobą powiązane. Istnieją 3 rodzaje relacji:
 
-####Przykład Diagram Hospital
+#### Przykład Diagram Hospital
 
 ### Jeden do jednego - 1:1
 Najprostszy do zrozumienia rodzaj relacji. Łączy dokładnie **jeden** rekord z **Tabeli 1** z dokładnie **jednym** rekordem z **Tabeli 2**. Stosowany często do rozszerzania pewnych informacji. 
