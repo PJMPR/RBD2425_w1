@@ -1,4 +1,3 @@
-###### Podstawy baz danych
 
 # Bazowe pojęcia dotyczące baz danych
 
