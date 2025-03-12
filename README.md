@@ -100,6 +100,8 @@ PASSPORTS
 TICKETS
 ```
 
+
+Żródło: https://mhyla.com/rbd-1/
 ### Wiele do wielu - m:n
 Ten rodzaj relacji określa, że **wiele rekordów** z **Tabeli 1** może być przypisanych do **wielu rekordów** **Tabeli 2**. W implementacji bazy danych taka relacja wymaga stworzenia dodatkowej tabeli, tzw. **łączącej** lub **asocjacyjnej**. Spotkać się można również z określeniem **tabela agregująca**, ale jest ono błędne.
 
